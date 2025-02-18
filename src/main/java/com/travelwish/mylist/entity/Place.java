@@ -27,4 +27,7 @@ public class Place {
     private Date created_at;
 
 
+    public void setId(Integer id) {
+        this.placeId = id;
+    }
 }

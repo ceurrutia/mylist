@@ -32,6 +32,13 @@ public class PlaceController {
         return place;
     }
 
+    @PutMapping("/{id}")
+    public Place update(@PathVariable("id") Integer id, @RequestBody Place place) {
+        place.setId(id);
+        placeService.saveOrUpdate(place);
+        return place;
+    }
+
     @DeleteMapping("/{id}")
     public void delete(@PathVariable( "id") Integer id){
         placeService.delete(id);
